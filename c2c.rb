@@ -5,15 +5,15 @@
 class C2c < Formula
   desc "Wrap OpenClaw plugins as standard CLI tools"
   homepage "https://github.com/YangZhengCQ/Claw2cli"
-  version "0.2.2-alpha"
+  version "0.3.1-alpha"
   license "MIT"
 
   depends_on "node" => :recommended
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/YangZhengCQ/Claw2cli/releases/download/v0.2.2-alpha/c2c_darwin_amd64.tar.gz"
-      sha256 "20c24e11c2b5f679c753ace5add8fef5291c29350bccfe5c941bfbeb7b9150d1"
+      url "https://github.com/YangZhengCQ/Claw2cli/releases/download/v0.3.1-alpha/c2c_darwin_amd64.tar.gz"
+      sha256 "b5132db58d3c324b89651000f2f699fd735fb544e38a0f711f8cda68c392626a"
 
       define_method(:install) do
         libexec.install Dir["shim"]
@@ -21,8 +21,8 @@ class C2c < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/YangZhengCQ/Claw2cli/releases/download/v0.2.2-alpha/c2c_darwin_arm64.tar.gz"
-      sha256 "3efeca54e5444ce729b19448115719a0c5ea89bc50b2a1c46562ab17016ba40e"
+      url "https://github.com/YangZhengCQ/Claw2cli/releases/download/v0.3.1-alpha/c2c_darwin_arm64.tar.gz"
+      sha256 "ddd952c19c516ade15051ac1a10db6c7bc5c251e1d7b258c106f7ea18ab439b4"
 
       define_method(:install) do
         libexec.install Dir["shim"]
@@ -33,16 +33,16 @@ class C2c < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/YangZhengCQ/Claw2cli/releases/download/v0.2.2-alpha/c2c_linux_amd64.tar.gz"
-      sha256 "a798475badaf17f7fdd120b7cffbc7c282ffec9e87fedfc023f90c6e79c49558"
+      url "https://github.com/YangZhengCQ/Claw2cli/releases/download/v0.3.1-alpha/c2c_linux_amd64.tar.gz"
+      sha256 "565bd5d8ed8bbdbbc3763327ef60649c4c2dfd15e754add7400eef77b298272a"
       define_method(:install) do
         libexec.install Dir["shim"]
         bin.install "c2c"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/YangZhengCQ/Claw2cli/releases/download/v0.2.2-alpha/c2c_linux_arm64.tar.gz"
-      sha256 "a99561357597d2587a911fee4a19511bd8677f414030a4449c66b3770c292997"
+      url "https://github.com/YangZhengCQ/Claw2cli/releases/download/v0.3.1-alpha/c2c_linux_arm64.tar.gz"
+      sha256 "b3b7b29153d37a118d916aa302549451387bb37785165f22ebf83d812c57d1eb"
       define_method(:install) do
         libexec.install Dir["shim"]
         bin.install "c2c"
